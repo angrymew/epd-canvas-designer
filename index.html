@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>EPD Canvas</title>
+ <style>
+  body {
+   margin: 3px;
+   padding: 6px;
+   font-size: 22px;
+  }
+  canvas {
+   border: 2px solid black;
+  }
+  .toolbar button,
+  #clearButton,
+  #saveButton {
+   padding: 15px;
+   font-size: 24px;
+  }
+  
+  .toolbar {
+ margin-bottom: 12px;
+}
+.toolbar button {
+ padding: 10px;
+ margin-right: 7px;
+ background: white;
+ color: black;
+ border: none;
+ cursor: pointer;
+}
+.color-palette {
+ display: flex;
+ justify-content: center;
+ margin-bottom: 12px;
+}
+.color-palette .color-swatch {
+ width: 32px;
+ height: 32px;
+ border: 3px solid white;
+ cursor: pointer;
+ margin-right: 6px;
+}
+.status-bar {
+ padding: 7px;
+ background: white;
+ color: black;
+}
+
+ </style>
+ <script src="epd-canvas.js" type="text/javascript"></script>
+</head>
+<body>
+ <h1>Imagotag EPD image designer</h1>
+ <div class="toolbar">
+	 <button id="pencilTool">Pencil</button>
+	 <button id="eraserTool">Eraser</button>
+	 <button id="fillBlackButton">Fill Black</button>
+	 <button id="fillRedButton">Fill Red</button>
+	 <button id="fillWhiteButton">Fill White</button>
+	</div>
+	<div class="color-palette">
+	 <div class="color-swatch" style="background-color: black"></div>
+	 <div class="color-swatch" style="background-color: red"></div>
+	</div>
+ <canvas id="myCanvas" width="152" height="296"></canvas>
+ <button id="clearButton">Clear</button>
+ <button id="getCodeButton">Get code</button>
+ <textarea width="500px" height="200px" id="code"></textarea>
+</body>
+</html>
